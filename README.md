@@ -1,24 +1,44 @@
-# README
+# API-Minesweeper
+this is a simple test challenge api using recursive and DDD (Domain Driven Design) using ruby on rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
+ - Ruby V 3.2.2
+ - Bundle install
 
-Things you may want to cover:
+## Local Installation
 
-* Ruby version
+1. clone the repository
+```
+git clone git@github.com:ramses132/api-minesweeper.git
+```
+2. navegate to the project folder
 
-* System dependencies
+```
+cd api-minesweeper
+```
+3. bundle install
+```
+bundle install
+```
+4. create database and make migrations, *I am using SQLite just for test but u can change the adapter to postgres installing the gem and editing config/database.yml*
 
-* Configuration
+```
+rails db:create
+rails db:migrate
 
-* Database creation
+```
 
-* Database initialization
+5. run the server and enjoy testing the api!
 
-* How to run the test suite
+```
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributors
+- Ramses Salazar (Yugo)
 
-* Deployment instructions
+## License
+This project is licensed under the MIT License.
 
-* ...
+
+
