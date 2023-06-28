@@ -1,0 +1,112 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/games/{id}/flag":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    patch:
+      summary: flag game
+      responses:
+        '200':
+          description: successful
+  "/api/v1/games/{id}/question":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    patch:
+      summary: question game
+      responses:
+        '200':
+          description: successful
+  "/api/v1/games/{id}/reveal":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    patch:
+      summary: reveal game
+      responses:
+        '200':
+          description: successful
+  "/api/v1/games/{id}/generate_text":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: generate_text game
+      responses:
+        '200':
+          description: successful
+  "/api/v1/games":
+    get:
+      summary: list games
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create game
+      responses:
+        '200':
+          description: successful
+  "/api/v1/games/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show game
+      responses:
+        '200':
+          description: successful
+  "/api/v1/players/find_or_create":
+    post:
+      summary: find_or_create player
+      responses:
+        '200':
+          description: successful
+  "/api/v1/players/hello":
+    get:
+      summary: hello player
+      responses:
+        '200':
+          description: successful
+  "/api/v1/players/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show player
+      responses:
+        '200':
+          description: successful
+servers:
+- url: http://localhost:3000
+  variables:
+    defaultHost:
+      default: localhost:3000
